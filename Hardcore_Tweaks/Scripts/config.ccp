@@ -5,7 +5,6 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		/* ほぼすべての公式アイテムデータを読み込む設定 */
 		requiredAddons[] = 
 		{
 			"DZ_Data",
@@ -38,6 +37,7 @@ class CfgVehicles
 	class FieldBag_ColorBase { itemSize[] = {4, 5}; itemsCargoSize[] = {10, 15}; };
 	class TortillaBag;
 	class TortillaBag { itemSize[] = {4, 4}; itemsCargoSize[] = {8, 10}; };
+
 	/* --- 2. 衣服 (Clothing: Tops & Pants) --- */
 	class CargoPants_ColorBase;
 	class CargoPants_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {8, 1}; };
@@ -76,14 +76,15 @@ class CfgVehicles
 	class TrackSuitPants_ColorBase;
 	class TrackSuitPants_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
 	class TTSKOPants;
-	class TTSKOPants:TTSKOPants { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
+	class TTSKOPants { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; }; // 修正: ループ削除
 	class USMCPants_ColorBase;
 	class USMCPants_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
+
 	/* --- Jacket (Jacket) --- */
 	class M65Jacket_ColorBase;
 	class M65Jacket_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {8, 1}; };
 	class BDUJacket;
-	class BDUJacket: BDUJacket { itemSize[] = {3, 2}; itemsCargoSize[] = {8, 1}; };
+	class BDUJacket { itemSize[] = {3, 2}; itemsCargoSize[] = {8, 1}; }; // 修正: ループ削除
 	class Blouse_ColorBase;
 	class Blouse_ColorBase { itemSize[] = {2, 2}; itemsCargoSize[] = {2, 1}; };
 	class BomberJacket_ColorBase;
@@ -125,6 +126,7 @@ class CfgVehicles
 	class PrisonUniformJacket;
 	class PrisonUniformJacket { itemSize[] = {3, 2}; itemsCargoSize[] = {3, 1}; };
 	class QuiltedJacket_ColorBase;
+	class RickQuiltedJacket_ColorBase; // 必要な場合のみ
 	class QuiltedJacket_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
 	class Raincoat_ColorBase;
 	class Raincoat_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {3, 1}; };
@@ -150,6 +152,7 @@ class CfgVehicles
 	class WomanSuit_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {3, 1}; };
 	class WoolCoat_ColorBase;
 	class WoolCoat_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {3, 1}; };
+
 	/* --- 3. ベスト (Vests) --- */
 	class PlateCarrierVest;
 	class PlateCarrierVest { itemSize[] = {4, 4}; itemsCargoSize[] = {8, 1}; weight = 12000; };
@@ -165,13 +168,15 @@ class CfgVehicles
 	class PressVest_ColorBase { itemSize[] = {3, 3}; itemsCargoSize[] = {4, 1}; };
 	class LeatherStorageVest_ColorBase;
 	class LeatherStorageVest_ColorBase { itemSize[] = {3, 3}; itemsCargoSize[] = {6, 1}; };
+
 	/* --- 4. コンテナ・建築 (Containers & Camping) --- */
 	class AmmoBox;
 	class AmmoBox { itemSize[] = {2, 2}; itemsCargoSize[] = {6, 6}; };
 	class SeaChest;
 	class SeaChest { itemSize[] = {8, 4}; itemsCargoSize[] = {10, 15}; };
-	class Barrel_ColorBase;
-	class Barrel_Blue { itemSize[] = {8, 10}; itemsCargoSize[] = {10, 20}; };
+	class Barrel_ColorBase; // 宣言
+	class Barrel_Blue;
+	class Barrel_Blue: Barrel_ColorBase { itemSize[] = {8, 10}; itemsCargoSize[] = {10, 20}; }; // 継承を明示
 	class MediumTent;
 	class MediumTent { itemSize[] = {2, 10}; itemsCargoSize[] = {10, 20}; };
 
@@ -203,7 +208,7 @@ class CfgVehicles
 	class HumanSteakMeat;
 	class HumanSteakMeat { itemSize[] = {1, 2}; };
 	class Lard;
-	class Lard: Lard { itemSize[] = {1, 2}; };
+	class Lard { itemSize[] = {1, 2}; }; // 修正: ループ削除
 	class Marmalade;
 	class Marmalade { itemSize[] = {1, 1}; };
 	class MushroomBase;
@@ -215,25 +220,33 @@ class CfgVehicles
 	class Pear;
 	class Pear { itemSize[] = {1, 1}; };
 	class Potato;
-	class Potato: Potato { itemSize[] = {1, 1}; };
+	class Potato { itemSize[] = {1, 1}; }; // 修正: ループ削除
 	class PowderedMilk;
 	class PowderedMilk { itemSize[] = {1, 2}; };
 	class Rice;
-	class Rice: Rice { itemSize[] = {1, 2}; };
+	class Rice { itemSize[] = {1, 2}; }; // 修正: ループ削除
 	class SardinesCan;
 	class SardinesCan { itemSize[] = {1, 1}; };
 	class SardinesCan_Opened;
 	class SardinesCan_Opened { itemSize[] = {1, 1}; };
-	class Snack_ColorBase; class Snack_ColorBase { itemSize[] = {1, 1}; };
-	class SpaghettiCan; class SpaghettiCan { itemSize[] = {1, 1}; };
-	class TacticalBaconCan; class TacticalBaconCan { itemSize[] = {1, 1}; };
-	class TacticalBaconCan_Opened; class TacticalBaconCan_Opened { itemSize[] = {1, 1}; };
-	class WaterPouch_ColorBase; class WaterPouch_ColorBase { itemSize[] = {1, 1}; };
-	class Zagorky_ColorBase; class Zagorky_ColorBase { itemSize[] = {1, 1}; };
-	class Zucchini; class Zucchini { itemSize[] = {1, 1}; };
-	class SodaCan_ColorBase; class SodaCan_ColorBase { itemSize[] = {1, 1}; };
-	class WaterBottle; class WaterBottle { itemSize[] = {1, 2}; };
-
+	class Snack_ColorBase; 
+	class Snack_ColorBase { itemSize[] = {1, 1}; };
+	class SpaghettiCan; 
+	class SpaghettiCan { itemSize[] = {1, 1}; };
+	class TacticalBaconCan; 
+	class TacticalBaconCan { itemSize[] = {1, 1}; };
+	class TacticalBaconCan_Opened; 
+	class TacticalBaconCan_Opened { itemSize[] = {1, 1}; };
+	class WaterPouch_ColorBase; 
+	class WaterPouch_ColorBase { itemSize[] = {1, 1}; };
+	class Zagorky_ColorBase; 
+	class Zagorky_ColorBase { itemSize[] = {1, 1}; };
+	class Zucchini; 
+	class Zucchini { itemSize[] = {1, 1}; };
+	class SodaCan_ColorBase; 
+	class SodaCan_ColorBase { itemSize[] = {1, 1}; };
+	class WaterBottle; 
+	class WaterBottle { itemSize[] = {1, 2}; };
 
 	/* ---医療 (Medical) --- */
 	class BandageDressing;
