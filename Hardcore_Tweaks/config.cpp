@@ -8,22 +8,6 @@ class CfgPatches
 		requiredAddons[] = 
 		{
 			"DZ_Data",
-			"DZ_Characters_Backpacks",
-			"DZ_Characters_Tops",
-			"DZ_Characters_Pants",
-			"DZ_Characters_Vests",
-			"DZ_Characters_Headgear",
-			"DZ_Gear_Food",
-			"DZ_Gear_Medical",
-			"DZ_Gear_Tools",
-			"DZ_Gear_Camping",
-			"DZ_Gear_Construction",
-			"DZ_Gear_Containers",
-			"DZ_Gear_Drinks",
-			"DZ_Weapons_Firearms",
-			"DZ_Weapons_Magazines",
-			"DZ_Weapons_Melee",
-			"DZ_Vehicles_Parts"
 		};
 	};
 };
