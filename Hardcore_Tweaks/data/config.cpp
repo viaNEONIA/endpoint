@@ -31,7 +31,6 @@ class CfgPatches
 class CfgVehicles
 {
 	/* --- 1. バックパック (Backpacks) --- */
-	class AliceBag_ColorBase;
 	class AliceBag_ColorBase { itemSize[] = {4, 4}; itemsCargoSize[] = {10, 10}; };
 	class FieldBag_ColorBase;
 	class FieldBag_ColorBase { itemSize[] = {4, 5}; itemsCargoSize[] = {10, 15}; };
