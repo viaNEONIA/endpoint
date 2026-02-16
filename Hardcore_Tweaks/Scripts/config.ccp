@@ -75,8 +75,8 @@ class CfgVehicles
 	class SlacksPants_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
 	class TrackSuitPants_ColorBase;
 	class TrackSuitPants_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
-	class TTSKOPants;
-	class TTSKOPants { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; }; // 修正: ループ削除
+	class Clothing;
+	class TTSKOPants { itemSize[] = {3, 2}; itemsCargoSize[]={2,1};	};
 	class USMCPants_ColorBase;
 	class USMCPants_ColorBase { itemSize[] = {3, 2}; itemsCargoSize[] = {4, 1}; };
 
