@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override56
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,21 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Characters_Headgear" // ヘルメットパーツの定義場所
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// ゴルカヘルメット用バイザー
 	class GorkaHelmetVisor: Inventory_Base
 	{
-		itemSize[]={2,1};
+		// 2x1 にスリム化。
+		// 先ほどのゴルカジャケット（1x5）には入りませんが、
+		// 消防士パンツ（4x1）なら予備として2枚横並びに収まるサイズです。
+		itemSize[]={3,2};
 	};
 };

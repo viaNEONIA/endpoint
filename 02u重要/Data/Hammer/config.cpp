@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override59
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,20 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Tools" // ハンマー等の工具類が含まれるアドオン
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// ハンマー
 	class Hammer: Inventory_Base
 	{
-		itemSize[]={1,2};
+		// 1x3 から 1x2 へスリム化。
+		// 縦長ポーチや、ジャケット（1x2）のメインスロットにジャストフィット。
+		itemSize[]={1,3};
 	};
 };

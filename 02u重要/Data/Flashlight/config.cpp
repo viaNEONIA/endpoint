@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override47 // 番号を47に更新
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,20 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Tools" // 懐中電灯などのツール類
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// 懐中電灯
 	class Flashlight: Inventory_Base
 	{
-		itemSize[]={2,1};
+		// 1x3 から 2x1 へ。
+		// ポケットの横幅を活かした収納が可能に。
+		itemSize[]={1,2};
 	};
 };

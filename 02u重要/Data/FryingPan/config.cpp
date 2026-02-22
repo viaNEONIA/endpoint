@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override50
 	{
 		units[]={};
 		weapons[]={};
@@ -19,7 +19,7 @@ class CfgVehicles
 	class Bottle_Base;
 	class FryingPan: Inventory_Base
 	{
-		itemSize[]={3,1};
+		itemSize[]={3,2};
 		itemsCargoSize[]={2,1};
 	};
 };

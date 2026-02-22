@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override4
 	{
 		units[]={};
 		weapons[]={};
@@ -16,7 +16,7 @@ class CfgVehicles
 	class Clothing;
 	class ArmyPouch_ColorBase: Clothing
 	{
-		itemSize[]={4,5};
+		itemSize[]={3,4};
 		itemsCargoSize[]={4,4};
 	};
 };

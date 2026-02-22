@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override2
 	{
 		units[]={};
 		weapons[]={};
@@ -18,8 +18,8 @@ class CfgVehicles
 	class WorldContainer_Base;
 	class AmmoBox: Container_Base
 	{
-		itemSize[]={2,2};
+		itemSize[]={3,3};
 		itemsCargoSize[]={5,5};
-		weight=45000;
+		weight=25000;
 	};
 };

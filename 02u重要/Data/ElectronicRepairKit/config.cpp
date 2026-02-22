@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override41
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,19 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Tools" // 修理キット類が含まれるツール系のアドオンを指定
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// 電子修理キット
 	class ElectronicRepairKit: Inventory_Base
 	{
+		// 2x2 から 1x2 へスリム化。縦長のポーチにも収まりやすく。
 		itemSize[]={1,2};
 	};
 };

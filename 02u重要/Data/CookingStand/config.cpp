@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override31
 	{
 		units[]={};
 		weapons[]={};
@@ -8,17 +8,19 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Cooking" // 調理器具系データを確実に上書きするために指定
 		};
 	};
 };
+
 class CfgVehicles
 {
-	class HouseNoDestruct;
 	class Inventory_Base;
-	class Bottle_Base;
+	
+	// クッキングスタンド（三脚）
 	class CookingStand: Inventory_Base
 	{
+		// 1x4 から 1x5 に延長。収納により高いバッグが必要に。
 		itemSize[]={1,5};
 	};
 };

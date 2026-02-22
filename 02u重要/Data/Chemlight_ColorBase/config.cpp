@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override27
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,19 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Tools" // ケミライトなどのツール類を確実に読み込む
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// ケミライト（全色のベースクラス）
 	class Chemlight_ColorBase: Inventory_Base
 	{
+		// 1x2 から 1x1 にコンパクト化
 		itemSize[]={1,1};
 	};
 };

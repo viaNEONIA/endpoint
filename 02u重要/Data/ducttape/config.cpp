@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override39
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,19 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Tools" // ダクトテープなどのツール類が含まれるデータを指定
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// ダクトテープ
 	class DuctTape: Inventory_Base
 	{
+		// 1x2 から 1x1 にコンパクト化
 		itemSize[]={1,1};
 	};
 };

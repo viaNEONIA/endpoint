@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override20
 	{
 		units[]={};
 		weapons[]={};
@@ -8,16 +8,19 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Gear_Medical"
+			"DZ_Gear_Cooking" // 調理器具・ガス関係のデータを読み込む
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Box_Base;
+	
+	// ガスカートリッジ
 	class ButaneCanister: Inventory_Base
 	{
-		itemSize[]={2,1};
+		// 2x2 から 2x1 へコンパクト化
+		itemSize[]={2,2};
 	};
 };
