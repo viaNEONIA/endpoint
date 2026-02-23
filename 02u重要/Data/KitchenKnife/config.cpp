@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override75
 	{
 		units[]={};
 		weapons[]={};
@@ -12,14 +12,17 @@ class CfgPatches
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// キッチンナイフ
 	class KitchenKnife: Inventory_Base
 	{
-		itemSize[]={1,2};
+		// 1x3 から 1x2 へ。
+		// わずか1マスの差ですが、ジャンプスーツパンツ(2x1)のポケットに
+		// 横向き（2x1）なら収まる、というパズル的な面白さが生まれます。
+		itemSize[]={1,3};
 	};
 };

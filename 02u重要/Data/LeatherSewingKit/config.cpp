@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class HardcoreClothing_Override
+	class HardcoreClothing_Override82
 	{
 		units[]={};
 		weapons[]={};
@@ -8,18 +8,22 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"DZ_Data",
-			"DZ_Weapons_Melee"
+			"DZ_Gear_Tools" // 通常、道具類はこのアドオンに含まれます
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
-	class Switchable_Base;
-	class Powered_Base;
-	class FishingRod_Base;
+	
+	// レザーソーイングキット（皮細工用修復キット）
 	class LeatherSewingKit: Inventory_Base
 	{
-		itemSize[]={1,2};
+		// 1x3 から 1x2 へ。
+		// これにより、先ほど調整したレザーパンツ(2x1)のポケットに
+		// 横向き（2x1）にしてぴったり収まるようになりました。
+		// 「自分の服を直すための道具を、その服のポケットに忍ばせる」というリアリズム！
+		itemSize[]={1,3};
 	};
 };
